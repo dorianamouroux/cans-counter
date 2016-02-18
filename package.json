@@ -1,0 +1,26 @@
+{
+  "name": "cans-counter",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "dependencies": {
+    "body-parser": "^1.15.0",
+    "mongoose": "^4.4.4",
+    "express": "^4.13.4",
+    "morgan": "^1.6.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dorianamouroux/cans-counter.git"
+  },
+  "author": "dorianamouroux",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dorianamouroux/cans-counter/issues"
+  },
+  "homepage": "https://github.com/dorianamouroux/cans-counter#readme"
+}
