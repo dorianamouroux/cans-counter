@@ -3,15 +3,15 @@ API for the application to figure out how many cans I drink a day
 
 ## routes
 
-#### GET /users
+#### GET /user
 Return the list of users
 
-#### POST /cans
+#### GET /user/:user_id
+Return all cans the users drank
+
+#### POST /user
 ###### params = name
 Add a new user with name 'name'
-
-#### GET /cans/:user_id
-Return all cans the users drank
 
 #### POST /cans
 ###### params = user_id
