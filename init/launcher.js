@@ -1,5 +1,5 @@
 var http = require('http'),
-    config = require('./config.json');
+    config = require('../config.json');
 
 function onHttpError(error) {
     if (error.syscall !== "listen") {

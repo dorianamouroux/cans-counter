@@ -17,5 +17,5 @@ function addRoutesFolder(app, folder) {
 }
 
 module.exports = function(app) {
-	addRoutesFolder(app, path.join(__dirname, "./routes/"));
+	addRoutesFolder(app, path.join(__dirname, "../routes/"));
 };
