@@ -13,7 +13,6 @@ Router.get('/users', function(req, res) {
 });
 
 Router.post('/users', function(req, res) {
-    console.log(req);
     if (req.body.name === undefined || req.body.name.length < 1)
         return (res.apiKo('A name is required'));
 
