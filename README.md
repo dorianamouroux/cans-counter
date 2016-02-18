@@ -6,6 +6,10 @@ API for the application to figure out how many cans I drink a day
 #### GET /users
 Return the list of users
 
+#### POST /cans
+###### params = name
+Add a new user with name 'name'
+
 #### GET /cans
 ###### params = user_id
 Return all cans the users drank
