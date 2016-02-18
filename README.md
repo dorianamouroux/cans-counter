@@ -10,8 +10,7 @@ Return the list of users
 ###### params = name
 Add a new user with name 'name'
 
-#### GET /cans
-###### params = user_id
+#### GET /cans/:user_id
 Return all cans the users drank
 
 #### POST /cans
