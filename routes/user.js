@@ -1,7 +1,7 @@
 var Router = require('express').Router(),
     UserModel = require('../models/user');
 
-Router.get('/users', function(req, res) {
+Router.get('/user', function(req, res) {
     UserModel.find({}, function(err, data) {
         if (err) {
             res.apiKo('Error database');
@@ -12,7 +12,20 @@ Router.get('/users', function(req, res) {
     });
 });
 
-Router.post('/users', function(req, res) {
+Router.get('/user/:user_id', function(req, res) {
+    UserModel.findOne({
+        _id: req.params.user_id
+    }, function(err, data) {
+        if (err) {
+            console.error(err);
+            res.apiKo('Error database');
+        } else {
+            res.apiOk(data);
+        }
+    });
+});
+
+Router.post('/user', function(req, res) {
     if (req.body.name === undefined || req.body.name.length < 1)
         return (res.apiKo('A name is required'));
 
