@@ -11,7 +11,7 @@ app.use(require('body-parser').json()); // POST params
 
 app.use(require('./api-helper')()); // api OK & api KO
 
-require('./router')(app); // routes
-require('./error')(app); // errors handler
+require('./init/router')(app); // routes
+require('./init/error')(app); // errors handler
 
-require('./launcher')(app); // launch http
+require('./init/launcher')(app); // launch http
