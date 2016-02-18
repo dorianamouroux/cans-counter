@@ -1,15 +1,17 @@
-var express = require("express");
+var app = require("express")();
 
-var app = express();
+require('mongoose').connect('mongodb://localhost/cans-counter');
 
 // some middleware
 app.use(require('morgan')('dev')); // log
-app.use(require('body-parser').json());
 app.use(require('body-parser').urlencoded({
     extended: false
-}));
+})); // POST params
+app.use(require('body-parser').json()); // POST params
 
-require('./router')(app);
-require('./error')(app);
+app.use(require('./api-helper')()); // api OK & api KO
 
-require('./launcher')(app);
+require('./router')(app); // routes
+require('./error')(app); // errors handler
+
+require('./launcher')(app); // launch http

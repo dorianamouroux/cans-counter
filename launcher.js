@@ -1,5 +1,5 @@
-var http = require("http"),
-    config = require("./config.json");
+var http = require('http'),
+    config = require('./config.json');
 
 function onHttpError(error) {
     if (error.syscall !== "listen") {
@@ -28,6 +28,6 @@ module.exports = function(app) {
     var server = http.createServer(app);
 
     server.listen(config.port);
-    server.on("error", onHttpError);
-    server.on("listening", onListening);
+    server.on('error', onHttpError);
+    server.on('listening', onListening);
 };
