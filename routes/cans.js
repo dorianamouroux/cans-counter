@@ -9,7 +9,6 @@ Router.post('/cans/:user_id', function(req, res) {
             console.error(err);
             res.apiKo('Error database');
         } else {
-            var newEvent = {};
             data.update({
                 $push: {
                     "cans": {}
